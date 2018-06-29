@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 /*#page1{ display:none;} */
@@ -26,7 +27,7 @@
     background-color: black;
     position: fixed;
     z-index: 9999;
-    font-family: "Arial", Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .middle {
@@ -44,7 +45,7 @@
 
 #but1,
 #but2 {
-    font-family: "Arial", Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     position: absolute;
     top: 80px;
     height: 300px;
@@ -74,86 +75,115 @@
     color: red;
 }
 
-#entradas{
+#entradas {
     position: absolute;
     width: 80%;
     left: 10%;
     top: 55%;
     text-align: center;
     font-size: 20px;
-    overflow-y:auto;
-    max-height: 35%;
-    font-family: "Arial", Helvetica, sans-serif;
+    overflow-y: auto;
+    max-height: 40%;
+    font-family: 'Raleway', sans-serif;
+    padding: 0 0 10px 0;
 }
 
-#entradas button{
+#entradas button {
     padding: 10px;
     width: 40%;
     margin-top: 5px;
     background-color: bisque;
     font-size: 25px;
     font-weight: 600;
-    font-family: "Arial", Helvetica, sans-serif;
+   font-family: 'Raleway', sans-serif;
+    border:none;
     box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 
 }
-#entradas input{
+
+#entradas input {
     border: none;
     border-bottom: 1px solid gray;
     text-align: center;
     margin: 0px 10px;
     padding: 5px;
     font-size: 25px;
+    font-family: 'Raleway', sans-serif;
 }
 
 
-input, button
-{
+input,
+button {
     font-size: 20px;
 }
 
-#items{
+#items {
     position: absolute;
     padding-top: 70px;
     height: 100%;
     width: 100%;
 }
 
-#items div{
+#items div {
     position: relative;
- font-size: 35px;
+    font-size: 35px;
     display: inline-block;
 }
+
 .item {
     position: relative;
     width: 100%;
 }
 
-.plus, .minus, .num{
+.plus,
+.minus,
+.num {
     position: relative;
     text-align: center;
-    width:35px;
+    width: 35px;
     height: 35px;
     line-height: 35px;
     font-weight: 800;
-    right:-25%;
+    right: -20%;
+    padding: 5px 4px;
 }
 
-.name{
+.plus,
+.minus{
+        right: -20%;
+    
+    border-radius: 35%;
+    padding: 3px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+ background-color: green;
+    color: white;
+    font-weight: 900;
+}
+
+.minus{
+    background-color: red;
+}
+
+.name {
     width: 60%;
     overflow-x: hidden;
 }
 
-li
-{list-style-type: none;}
+li {
+    list-style-type: none;
+}
 
-ul
-{border: 1px solid black;
+ul {
+    border: 1px solid black;
     padding: 10px;
-    border-radius: 10px; }
+    margin-bottom: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 
-#check{
-        width: 75px;
+}
+
+#check {
+    width: 75px;
     min-width: 56px;
     /* override this from default button */
     height: 75px;
@@ -173,7 +203,7 @@ ul
 }
 
 #trocobar {
-    font-family: "Arial", Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     position: absolute;
     bottom: 0px;
     height: 50px;
@@ -183,19 +213,35 @@ ul
     line-height: 50px;
 }
 
-#trocobar *
-{
+#trocobar input {
+    width: 30%;
+    border: 1px solid gray;
+    border-top: none;
+    text-align: center;
+    padding: 5px;
     padding: 5px 15px;
     display: inline-block;
     font-size: 40px;
     margin-left: 15px;
 }
 
-#trocobar input
-{
-    width: 30%;
-     border: none;
-    border-bottom: 1px solid gray;
-    text-align: center;
-    padding: 5px;
+#trocobar button {
+    background: black;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid gray;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    padding: 5px 15px;
+    display: inline-block;
+    font-size: 40px;
+    margin-left: 15px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#trocobar div {
+    padding: 5px 15px;
+    display: inline-block;
+    font-size: 40px;
+    margin-left: 15px;
+    color: red;
 }

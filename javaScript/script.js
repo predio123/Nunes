@@ -20,7 +20,7 @@ function dEntrada() {
     $(aux).hide();
     var newyou = new product(noy, Number(precy));
     lista.push(newyou);
-    var newdiv = "<div><input id='nome" + (items + 1).toString() + "'><input id='preco" + (items + 1).toString() + "'></div><button id='bu" + (items + 1).toString() + "' onclick='dEntrada()'>Enter</button>"
+    var newdiv = "<div><input id='nome" + (items + 1).toString() + "' placeholder='Nome'><input id='preco" + (items + 1).toString() + "' placeholder='Preço'></div><button id='bu" + (items + 1).toString() + "' onclick='dEntrada()'>Enter</button>"
     $("#entradas").append(newdiv);
     aux = "#nome" + (items + 1).toString();
     $(aux).focus();
