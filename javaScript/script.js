@@ -20,14 +20,16 @@ function dEntrada() {
     $(aux).hide();
     var newyou = new product(noy, Number(precy));
     lista.push(newyou);
-    var newdiv = "<div><input id='nome" + (items + 1).toString() + "'><input id='preco" + (items + 1).toString() + "'><button id='bu" + (items + 1).toString() + "' onclick='dEntrada()'>Enter</button></div>"
+    var newdiv = "<div><input id='nome" + (items + 1).toString() + "'><input id='preco" + (items + 1).toString() + "'></div><button id='bu" + (items + 1).toString() + "' onclick='dEntrada()'>Enter</button>"
     $("#entradas").append(newdiv);
+    aux = "#nome" + (items + 1).toString();
+    $(aux).focus();
 }
 
 function tablet() {
     $('#page1').toggle();
     for (i in lista) {
-        var ready = "<ul><div class='item'><div class='name'>" + lista[i].nome + "(" + lista[i].preco.toFixed(2) + "€)" + "</div><div class='plus' onclick='subir(" + i + ")'>+</div><div class='num' id='num" + i + "'>0</div><div class='minus' onclick='descer(" + i + ")'>-</div></div></ul>"
+        var ready = "<ul><div class='item'><div class='name'>" + lista[i].nome + "   (" + lista[i].preco.toFixed(2) + "€)" + "</div><div class='plus' onclick='subir(" + i + ")'>+</div><div class='num' id='num" + i + "'>0</div><div class='minus' onclick='descer(" + i + ")'>-</div></div></ul>"
         $("#rede").append(ready);
     }
     upDateTotal();

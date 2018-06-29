@@ -31,7 +31,7 @@
 
 .middle {
     position: relative;
-    width: 30%;
+    width: 40%;
     display: inline-block;
 }
 
@@ -60,11 +60,11 @@
 }
 
 #but1 {
-    left: 25%;
+    left: 10%;
 }
 
 #but2 {
-    right: 25%;
+    right: 10%;
 }
 
 #but2 span {
@@ -78,11 +78,34 @@
     position: absolute;
     width: 80%;
     left: 10%;
-    top: 45%;
+    top: 55%;
     text-align: center;
     font-size: 20px;
-    overflow-y: scroll;
+    overflow-y:auto;
+    max-height: 35%;
+    font-family: "Arial", Helvetica, sans-serif;
 }
+
+#entradas button{
+    padding: 10px;
+    width: 40%;
+    margin-top: 5px;
+    background-color: bisque;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Arial", Helvetica, sans-serif;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+}
+#entradas input{
+    border: none;
+    border-bottom: 1px solid gray;
+    text-align: center;
+    margin: 0px 10px;
+    padding: 5px;
+    font-size: 25px;
+}
+
 
 input, button
 {
@@ -98,7 +121,7 @@ input, button
 
 #items div{
     position: relative;
- font-size: 25px;
+ font-size: 35px;
     display: inline-block;
 }
 .item {
@@ -162,8 +185,17 @@ ul
 
 #trocobar *
 {
-    padding: 0px 15px;
+    padding: 5px 15px;
     display: inline-block;
     font-size: 40px;
     margin-left: 15px;
+}
+
+#trocobar input
+{
+    width: 30%;
+     border: none;
+    border-bottom: 1px solid gray;
+    text-align: center;
+    padding: 5px;
 }
