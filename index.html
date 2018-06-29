@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>register sandBox</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Library jquery (General use)-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!-- JavaScript da página-->
+    <script src="javaScript/script.js"></script>
+
+    <!-- Use of icons from Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+
+
+<body>
+    <div id="page2">
+        <div class="banner">
+            <div class="middle" id="target"></div>
+            <div class="left"><i class="fas fa-bars"></i></div>
+        </div>
+        <div id="items">
+            <li id="rede">
+            </li>
+        </div>
+        <div id="trocobar"><input id="pago"><button onclick="troco()">TROCO</button><div id="resto"></div></div>
+        <div id="check" onclick="neworder()"><i class="fas fa-check"></i></div>
+    </div>
+
+    <div id="page1">
+        <div class="banner">
+            <div class="middle">Caixa Registadora</div>
+            <div class="left"><i class="far fa-save"></i></div>
+        </div>
+
+        <div id="but1" onclick="tablet()">Versão <i class="fas fa-tablet-alt"></i></div>
+        <div id="but2">Versão <i class="fas fa-mobile-alt"></i><br><span>(EM CRIAÇÃO)</span></div>
+        
+        <div id="entradas">
+        <div> Nome   |  Preço</div>
+            <div><input id="nome1"><input id="preco1"><button id="bu1" onclick="dEntrada()">Enter</button></div>
+        </div>
+        
+    </div>
+
+
+
+</body>
+
+</html>
