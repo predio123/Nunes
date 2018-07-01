@@ -95,8 +95,8 @@
     background-color: bisque;
     font-size: 25px;
     font-weight: 600;
-   font-family: 'Raleway', sans-serif;
-    border:none;
+    font-family: 'Raleway', sans-serif;
+    border: none;
     box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 
 }
@@ -111,6 +111,11 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.name {
+    position: relative;
+    top: 15px;
+    left: 5px;
+}
 
 input,
 button {
@@ -140,27 +145,26 @@ button {
 .num {
     position: relative;
     text-align: center;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     font-weight: 800;
-    right: -20%;
+    right: -15%;
     padding: 5px 4px;
 }
 
 .plus,
-.minus{
-        right: -20%;
-    
+.minus {
+    right: -15%;
     border-radius: 35%;
     padding: 3px;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
- background-color: green;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    background-color: green;
     color: white;
     font-weight: 900;
 }
 
-.minus{
+.minus {
     background-color: red;
 }
 
@@ -177,6 +181,8 @@ ul {
     border: 1px solid black;
     padding: 10px;
     margin-bottom: 5px;
+    height: 70px;
+    line-height: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 
