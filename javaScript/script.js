@@ -104,7 +104,7 @@ function resultados() {
     var text = "Vendas: " + vendas.toFixed(2) + "€";
     $("#ppreco").text(text);
     for (i in lista) {
-        text = lista[i].nome + ": " + lista[i].acumulado + " items.";
+        text = lista[i].nome + ": " + lista[i].total + " items.";
         aux = "#produ" + i.toString();
         $(aux).text(text);
     }
