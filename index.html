@@ -17,23 +17,31 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    </head>
+</head>
 
 
 
 <body>
     <div id="page2">
+        <div id="left-menu">
+            <div class="w">Resultados</div>
+            <div class="w">Modo Edição</div>
+            <div class="w">Retorno</div>
+            <div class="w">About</div>
+        </div>
         <div class="banner">
             <div class="middle" id="target"></div>
-            <div class="left"><i class="fas fa-bars"></i></div>
+            <div class="left" onclick="$('#left-menu').slideToggle('fast')"><i class="fas fa-bars"></i></div>
         </div>
         <div id="items">
             <li id="rede">
             </li>
         </div>
-        <div id="trocobar"><input id="pago"><button onclick="troco()">TROCO</button><div id="resto"></div></div>
+        <div id="trocobar"><input id="pago"><button onclick="troco()">TROCO</button>
+            <div id="resto"></div>
+        </div>
         <div id="check" onclick="neworder()"><i class="fas fa-check"></i></div>
     </div>
 
@@ -45,11 +53,11 @@
 
         <div id="but1" onclick="tablet()">Versão <i class="fas fa-tablet-alt"></i></div>
         <div id="but2">Versão <i class="fas fa-mobile-alt"></i><br><span>(EM CRIAÇÃO)</span></div>
-        
+
         <div id="entradas">
             <div><input id="nome1" placeholder='Nome'><input id="preco1" placeholder='Preço'></div><button id="bu1" onclick="dEntrada()">Enter</button>
         </div>
-        
+
     </div>
 
 

@@ -1,6 +1,7 @@
 var total = 0;
 var items = 0;
 var lista = [];
+var vendas = 0;
 
 /** New Match object Creator**/
 function product(name, price) {
@@ -20,6 +21,14 @@ function dEntrada() {
     $(aux).hide();
     var newyou = new product(noy, Number(precy));
     lista.push(newyou);
+    for (i = 1; i < items+1; i++) {
+        aux = '#nome' + i.toString();
+        noy = $(aux).val();
+        lista[i-1].nome=noy;
+        aux = '#preco' + i.toString();
+        precy = $(aux).val();
+        lista[i-1].preco=Number(precy);
+    }
     var newdiv = "<div><input id='nome" + (items + 1).toString() + "' placeholder='Nome'><input id='preco" + (items + 1).toString() + "' placeholder='Preço'></div><button id='bu" + (items + 1).toString() + "' onclick='dEntrada()'>Enter</button>"
     $("#entradas").append(newdiv);
     aux = "#nome" + (items + 1).toString();
@@ -64,6 +73,8 @@ function upDateTotal() {
 
 function neworder() {
     for (i in lista) {
+        lista[i].total = lista[i].total + lista[i].acumulado;
+        vendas= vendas + lista[i].acumulado*lista[i].preco;
         lista[i].acumulado = 0;
         aux = '#num' + i.toString();
         $(aux).text("0");
@@ -71,11 +82,12 @@ function neworder() {
     $("#pago").val("");
     $("#resto").text("");
     upDateTotal();
+    console.log(vendas);
 }
 
 function troco() {
-    var dado =Number($("#pago").val());
+    var dado = Number($("#pago").val());
     dinheiro = dado - total;
-    aux =dinheiro.toFixed(2)+"€";
+    aux = dinheiro.toFixed(2) + "€";
     $('#resto').text(aux);
 }
