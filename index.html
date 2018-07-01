@@ -25,15 +25,19 @@
 
 <body>
     <div id="page2">
+        <div id="resultsp">
+            <div id="pclose" onclick="$('#resultsp').hide()"><i class="far fa-window-close"></i></div><br>
+            <div id="ppreco" class="y"></div>
+        </div>
         <div id="left-menu">
-            <div class="w">Resultados</div>
+            <div class="w" onclick="resultados()">Resultados</div>
             <div class="w">Modo Edição</div>
-            <div class="w">Retorno</div>
+            <div class="w" onclick="nas()" id="rail">Retorno</div>
             <div class="w">About</div>
         </div>
         <div class="banner">
             <div class="middle" id="target"></div>
-            <div class="left" onclick="$('#left-menu').slideToggle('fast')"><i class="fas fa-bars"></i></div>
+            <div class="left" onclick="$('#left-menu').slideToggle('fast'); colorup()"><i class="fas fa-bars"></i></div>
         </div>
         <div id="items">
             <li id="rede">

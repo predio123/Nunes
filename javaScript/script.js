@@ -2,6 +2,7 @@ var total = 0;
 var items = 0;
 var lista = [];
 var vendas = 0;
+var nega = true;
 
 /** New Match object Creator**/
 function product(name, price) {
@@ -21,13 +22,13 @@ function dEntrada() {
     $(aux).hide();
     var newyou = new product(noy, Number(precy));
     lista.push(newyou);
-    for (i = 1; i < items+1; i++) {
-        aux = '#nome' + i.toString();
+    for (i = 1; i < items; i++) {
+        aux = '#nome' + (i).toString();
         noy = $(aux).val();
-        lista[i-1].nome=noy;
-        aux = '#preco' + i.toString();
+        lista[i - 1].nome = noy;
+        aux = '#preco' + (i).toString();
         precy = $(aux).val();
-        lista[i-1].preco=Number(precy);
+        lista[i - 1].preco = Number(precy);
     }
     var newdiv = "<div><input id='nome" + (items + 1).toString() + "' placeholder='Nome'><input id='preco" + (items + 1).toString() + "' placeholder='Preço'></div><button id='bu" + (items + 1).toString() + "' onclick='dEntrada()'>Enter</button>"
     $("#entradas").append(newdiv);
@@ -36,11 +37,13 @@ function dEntrada() {
 }
 
 function tablet() {
-    $('#page1').toggle();
     for (i in lista) {
         var ready = "<ul><div class='item'><div class='name'>" + lista[i].nome + "   (" + lista[i].preco.toFixed(2) + "€)" + "</div><div class='plus' onclick='subir(" + i + ")'>+</div><div class='num' id='num" + i + "'>0</div><div class='minus' onclick='descer(" + i + ")'>-</div></div></ul>"
         $("#rede").append(ready);
+        ready = "<div id='produ" + i.toString() + "' class='y'></div>";
+        $("#resultsp").append(ready);
     }
+    $('#page1').toggle();
     upDateTotal();
 }
 
@@ -57,6 +60,11 @@ function descer(i) {
     var aux = '#num' + i.toString();
     var qtd = Number($(aux).text());
     qtd = qtd - 1;
+    if (nega == false) {
+        if (qtd < 0) {
+            qtd = 0;
+        }
+    }
     lista[i].acumulado = qtd;
     $(aux).text(qtd.toString());
     upDateTotal();
@@ -74,7 +82,7 @@ function upDateTotal() {
 function neworder() {
     for (i in lista) {
         lista[i].total = lista[i].total + lista[i].acumulado;
-        vendas= vendas + lista[i].acumulado*lista[i].preco;
+        vendas = vendas + lista[i].acumulado * lista[i].preco;
         lista[i].acumulado = 0;
         aux = '#num' + i.toString();
         $(aux).text("0");
@@ -90,4 +98,42 @@ function troco() {
     dinheiro = dado - total;
     aux = dinheiro.toFixed(2) + "€";
     $('#resto').text(aux);
+}
+
+function resultados() {
+    var text = "Vendas: " + vendas.toFixed(2) + "€";
+    $("#ppreco").text(text);
+    for (i in lista) {
+        text = lista[i].nome + ": " + lista[i].acumulado + " items.";
+        aux = "#produ" + i.toString();
+        $(aux).text(text);
+    }
+    $("#resultsp").show();
+    $("#left-menu").hide();
+}
+
+function colorup() {
+    if (nega == true) {
+        $("#rail").css({
+            backgroundColor: 'green'
+        });
+    } else {
+        $("#rail").css({
+            backgroundColor: 'red'
+        });
+    }
+}
+
+function nas() {
+    if (nega == false) {
+        nega = true;
+        $("#rail").css({
+            backgroundColor: 'green'
+        });
+    } else {
+        nega = false;
+        $("#rail").css({
+            backgroundColor: 'red'
+        });
+    }
 }
