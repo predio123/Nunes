@@ -137,3 +137,11 @@ function nas() {
         });
     }
 }
+
+function evento()
+{
+    var agreg =Number($("#event").val());
+    vendas=vendas+agreg;
+    agreg =0;
+    $("#event").val(agreg);
+}
