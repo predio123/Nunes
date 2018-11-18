@@ -261,3 +261,7 @@ function evento() {
         $("#event1").val(agreg);
     }
 }
+
+function about(){
+    $('#about').toggle();
+}
