@@ -24,6 +24,35 @@
 
 
 <body>
+    <!-- Telemovel-->
+        <div id="page3">
+        <div id="resultsp1">
+            <div id="pclose1" onclick="$('#resultsp1').hide()"><i class="far fa-window-close"></i></div><br>
+            <div id="ppreco1" class="t"></div>
+        </div>
+        <div id="left-menu1">
+            <div class="z" onclick="resultados()">Resultados</div>
+            <div class="z">Modo Edição</div>
+            <div class="z" onclick="nas()" id="rail1">Retorno</div>
+            <div class="z" onclick="evento()"><input id="event1"><span class="bi">add</span></div>
+            <div class="z">About</div>
+        </div>
+        <div class="banner1">
+            <div class="middle1" id="target1"></div>
+            <div class="left1" onclick="$('#left-menu1').slideToggle('fast'); colorup()"><i class="fas fa-bars"></i></div>
+        </div>
+        <div id="items1">
+            <li id="rede1">
+            </li>
+        </div>
+        <div id="trocobar1">
+            <div id="cancel1" class="butpho" onclick="cancel()">CANCEL</div>
+            <div id="check1" class="butpho" onclick="neworder()"><i class="fas fa-check"></i></div>
+        </div>
+        
+    </div>
+    
+    <!-- PC -->
     <div id="page2">
         <div id="resultsp">
             <div id="pclose" onclick="$('#resultsp').hide()"><i class="far fa-window-close"></i></div><br>
@@ -33,7 +62,7 @@
             <div class="w" onclick="resultados()">Resultados</div>
             <div class="w">Modo Edição</div>
             <div class="w" onclick="nas()" id="rail">Retorno</div>
-            <div class="w" onclick="evento()"><input id="event"></div>
+            <div class="w" onclick="evento()"><input id="event"><span class="bi" onclick="evento()">add</span></div>
             <div class="w">About</div>
         </div>
         <div class="banner">
@@ -56,8 +85,8 @@
             <div class="left"><i class="far fa-save"></i></div>
         </div>
 
-        <div id="but1" onclick="tablet()">Versão <i class="fas fa-tablet-alt"></i></div>
-        <div id="but2">Versão <i class="fas fa-mobile-alt"></i><br><span>(EM CRIAÇÃO)</span></div>
+        <div id="but1" onclick="tablet()" class="primeInit">Versão <i class="fas fa-tablet-alt"></i></div>
+        <div id="but2" onclick= "phone()" class="primeInit outof">Versão <i class="fas fa-mobile-alt"></i></div>
 
         <div id="entradas">
             <div><input id="nome1" placeholder='Nome'><input id="preco1" placeholder='Preço'></div><button id="bu1" onclick="dEntrada()">Enter</button>
